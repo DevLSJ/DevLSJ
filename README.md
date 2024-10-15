@@ -1,6 +1,6 @@
 ## Hello! 안녕하세요! こんにちは！ 👋
 ***
-<!-- 목차 -->
+- I'm currently learning "Algorithm"
 
 <!--
 **DevLSJ/DevLSJ** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
