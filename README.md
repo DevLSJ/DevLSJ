@@ -1,4 +1,7 @@
-## Hi there 👋
+## Hello! 안녕하세요! こんにちは！ 👋
+# This is my first github practice!
+***
+<!-- 목차 -->
 
 <!--
 **DevLSJ/DevLSJ** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
