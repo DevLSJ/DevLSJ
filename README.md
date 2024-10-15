@@ -1,5 +1,4 @@
-# Hello! 안녕하세요! こんにちは！ 👋
-## This is my first github practice!
+## Hello! 안녕하세요! こんにちは！ 👋
 ***
 <!-- 목차 -->
 
