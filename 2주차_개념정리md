@@ -1,0 +1,43 @@
+# JavaScript: 사용자 로그인 저장 및 환영 메시지 표시
+
+## **HTML 요소 선택**
+- `document.querySelector`: HTML 요소를 선택.
+  - `#loginForm input`: 로그인 입력 필드 선택.
+  - `#loginForm`: 로그인 폼 선택.
+  - `#greeting`: 환영 메시지를 표시할 요소 선택.
+
+## **`localStorage`**
+- 브라우저에 데이터를 키-값 쌍으로 저장.
+- **메서드**:
+  - `setItem(key, value)`: 데이터 저장.
+  - `getItem(key)`: 데이터 가져오기.
+  - `removeItem(key)`: 데이터 삭제.
+
+## **클래스 조작**
+- `element.classList.add("className")`: 클래스 추가.
+- `element.classList.remove("className")`: 클래스 제거.
+
+## **`preventDefault`**
+- 기본 이벤트 동작(예: 폼 제출)을 막음.
+
+## **코드 흐름**
+1. **상수 정의**:
+   - `HIDDEN_CLASSNAME`: 숨김 처리를 위한 CSS 클래스 이름.
+   - `USERNAME_KEY`: `localStorage`에 저장할 키 이름.
+
+2. **로그인 폼 처리**:
+   - `onLoginSubmit`:
+     - 폼 제출 시 기본 동작을 방지.
+     - 입력값(`loginInput.value`)을 가져와 `localStorage`에 저장.
+     - 폼에 `HIDDEN_CLASSNAME` 추가하여 숨김 처리.
+     - 환영 메시지 표시 함수(`callGreeings`) 호출.
+
+3. **환영 메시지 표시**:
+   - `callGreeings(username)`:
+     - 텍스트로 `Welcome [username]` 표시.
+     - `HIDDEN_CLASSNAME`을 제거하여 메시지를 화면에 표시.
+
+4. **페이지 로드 시 상태 확인**:
+   - `localStorage.getItem(USERNAME_KEY)`로 저장된 사용자 이름 확인.
+   - 사용자 이름이 없으면(`null`) 로그인 폼 표시 및 이벤트 리스너 추가.
+   - 저장된 사용자 이름이 있으면 환영 메시지 표시.
