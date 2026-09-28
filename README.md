@@ -4,7 +4,7 @@
   · assets/activity.svg is refreshed daily by .github/workflows/refresh-stats.yml
   · GitHub renders tables as width:max-content with border-box cells
     (13px side padding), so every <td> width = content width + 26 and every
-    image carries an explicit pixel width. Outer table: 316 + 546 + 3 ≤ 870.
+    image carries an explicit pixel width. Outer table: 304 + 536 + 3 = 843 ≤ 846 (profile README width at ≥1280px).
 -->
 
 <div align="center">
@@ -22,9 +22,9 @@
 
 <table>
 <tr>
-<td width="316" valign="top">
+<td width="304" valign="top">
 
-<img src="assets/profile.svg" width="290" alt="DevLSJ profile card">
+<img src="assets/profile.svg" width="278" alt="DevLSJ profile card">
 
 ### :: now
 
@@ -37,19 +37,19 @@ eBPF 프로브로 커널 이벤트를 수집하고, 탐지 규칙과 ML 모델�
 <table>
 <tr>
 <td width="66"><img src="assets/icon-linux.svg" width="40" alt=""></td>
-<td width="220"><b><a href="https://github.com/DevLSJ/eBPF-Trace">eBPF-Trace</a></b> <sub><a href="https://github.com/DevLSJ/eBPF-Trace">↗</a></sub><br><sub>커널 레벨 공급망 공격 탐지 · Python / C / TS</sub></td>
+<td width="208"><b><a href="https://github.com/DevLSJ/eBPF-Trace">eBPF-Trace</a></b> <sub><a href="https://github.com/DevLSJ/eBPF-Trace">↗</a></sub><br><sub>커널 레벨 공급망 공격 탐지 · Python / C / TS</sub></td>
 </tr>
 <tr>
 <td width="66"><img src="assets/icon-openjdk.svg" width="40" alt=""></td>
-<td width="220"><b><a href="https://github.com/DevLSJ/AdminWeb">AdminWeb</a></b> <sub><a href="https://github.com/DevLSJ/AdminWeb">↗</a></sub><br><sub>Company solution 관리자 웹 · Java / TS</sub></td>
+<td width="208"><b><a href="https://github.com/DevLSJ/AdminWeb">AdminWeb</a></b> <sub><a href="https://github.com/DevLSJ/AdminWeb">↗</a></sub><br><sub>Company solution 관리자 웹 · Java / TS</sub></td>
 </tr>
 <tr>
 <td width="66"><img src="assets/icon-kotlin.svg" width="40" alt=""></td>
-<td width="220"><b><a href="https://github.com/DevLSJ/JansangTravel">JansangTravel</a></b> <sub><a href="https://github.com/DevLSJ/JansangTravel">↗</a></sub><br><sub>모바일 프로그래밍 텀프로젝트 · Kotlin</sub></td>
+<td width="208"><b><a href="https://github.com/DevLSJ/JansangTravel">JansangTravel</a></b> <sub><a href="https://github.com/DevLSJ/JansangTravel">↗</a></sub><br><sub>모바일 프로그래밍 텀프로젝트 · Kotlin</sub></td>
 </tr>
 <tr>
 <td width="66"><img src="assets/icon-c.svg" width="40" alt=""></td>
-<td width="220"><b><a href="https://github.com/DevLSJ/CLI_Crypto">CLI_Crypto</a></b> <sub><a href="https://github.com/DevLSJ/CLI_Crypto">↗</a></sub><br><sub>Crypto Programming Project</sub></td>
+<td width="208"><b><a href="https://github.com/DevLSJ/CLI_Crypto">CLI_Crypto</a></b> <sub><a href="https://github.com/DevLSJ/CLI_Crypto">↗</a></sub><br><sub>Crypto Programming Project</sub></td>
 </tr>
 </table>
 
@@ -66,13 +66,13 @@ eBPF 프로브로 커널 이벤트를 수집하고, 탐지 규칙과 ML 모델�
 <img src="assets/icon-docker.svg" width="30" alt="Docker"> <img src="assets/icon-terraform.svg" width="30" alt="Terraform"> <img src="assets/icon-postgresql.svg" width="30" alt="PostgreSQL"> <img src="assets/icon-fastapi.svg" width="30" alt="FastAPI"> <img src="assets/icon-spring.svg" width="30" alt="Spring"> <img src="assets/icon-android.svg" width="30" alt="Android"> <img src="assets/icon-gnubash.svg" width="30" alt="Bash"> <img src="assets/icon-github.svg" width="30" alt="GitHub">
 
 </td>
-<td width="546" valign="top">
+<td width="536" valign="top">
 
 ### :: about me
 
 <table>
 <tr>
-<td width="291" valign="top">
+<td width="281" valign="top">
 
 안녕하세요, 컴퓨터소프트웨어공학을 전공하는 주니어 개발자 **DevLSJ**입니다.
 
@@ -89,15 +89,15 @@ Kotlin으로 모바일 앱을, Java와 TypeScript로 관리자 웹을, Python으
 
 ### :: tech stack
 
-<a href="https://github.com/DevLSJ/JansangTravel"><img src="assets/stack-kotlin.svg" width="520" alt="Kotlin — Android · Mobile"></a>
-<a href="https://github.com/DevLSJ/AdminWeb"><img src="assets/stack-java.svg" width="520" alt="Java — Backend · Spring"></a>
-<a href="https://github.com/DevLSJ/eBPF-Trace"><img src="assets/stack-python.svg" width="520" alt="Python — Backend · Data"></a>
-<a href="https://github.com/DevLSJ/eBPF-Trace"><img src="assets/stack-ebpf.svg" width="520" alt="eBPF / Linux — Kernel · Security"></a>
-<a href="https://github.com/DevLSJ/AdminWeb"><img src="assets/stack-typescript.svg" width="520" alt="TypeScript / React — Frontend · Dashboard"></a>
+<a href="https://github.com/DevLSJ/JansangTravel"><img src="assets/stack-kotlin.svg" width="510" alt="Kotlin — Android · Mobile"></a>
+<a href="https://github.com/DevLSJ/AdminWeb"><img src="assets/stack-java.svg" width="510" alt="Java — Backend · Spring"></a>
+<a href="https://github.com/DevLSJ/eBPF-Trace"><img src="assets/stack-python.svg" width="510" alt="Python — Backend · Data"></a>
+<a href="https://github.com/DevLSJ/eBPF-Trace"><img src="assets/stack-ebpf.svg" width="510" alt="eBPF / Linux — Kernel · Security"></a>
+<a href="https://github.com/DevLSJ/AdminWeb"><img src="assets/stack-typescript.svg" width="510" alt="TypeScript / React — Frontend · Dashboard"></a>
 
 ### :: activity
 
-<img src="assets/activity.svg" width="520" alt="GitHub activity and language breakdown">
+<img src="assets/activity.svg" width="510" alt="GitHub activity and language breakdown">
 
 </td>
 </tr>
