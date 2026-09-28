@@ -258,3 +258,202 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+# =====================================================================
+#  Text blocks as SVG (so the two-column table can shrink at any width)
+# =====================================================================
+import re as _re
+
+KO_SANS = ("-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic',"
+           "'Noto Sans KR',Roboto,Helvetica,Arial,sans-serif")
+
+TEXT = dict(
+    now_title="now",
+    now_sub="2026 · 캡스톤 프로젝트",
+    now=[
+        "**eBPF-Trace** — 리눅스 커널 레벨에서 공급망 공격을 탐지하는 시스템을 만들고 있습니다.",
+        "eBPF 프로브로 커널 이벤트를 수집하고, 탐지 규칙과 ML 모델로 판별한 뒤, 대응 에이전트와 React 대시보드까지 이어지는 흐름을 직접 구현 중입니다.",
+    ],
+    pinned=[
+        dict(id="ebpf-trace", icon="linux", color="blue", name="eBPF-Trace", desc="커널 레벨 공급망 공격 탐지 · Python / C / TS"),
+        dict(id="adminweb", icon="openjdk", color="orange", name="AdminWeb", desc="Company solution 관리자 웹 · Java / TS"),
+        dict(id="jansangtravel", icon="kotlin", color="purple", name="JansangTravel", desc="모바일 프로그래밍 텀프로젝트 · Kotlin"),
+        dict(id="cli-crypto", icon="c", color="blue", name="CLI_Crypto", desc="Crypto Programming Project"),
+    ],
+    interests=[
+        ("#eBPF", "kernel tracing"),
+        ("#Linux", "systems programming"),
+        ("#Security", "supply-chain attack detection"),
+        ("#Android", "Kotlin mobile apps"),
+        ("#Backend", "Java · Python · PostgreSQL"),
+    ],
+    tools=["docker", "terraform", "postgresql", "fastapi", "spring", "android", "gnubash", "github"],
+    about=[
+        "안녕하세요, 컴퓨터소프트웨어공학을 전공하는 주니어 개발자 **DevLSJ**입니다.",
+        "Kotlin으로 모바일 앱을, Java와 TypeScript로 관리자 웹을, Python으로 탐지 서비스를 만들어 봤습니다. 지금은 **eBPF**로 리눅스 커널 레벨에서 공급망 공격을 잡아내는 캡스톤 프로젝트에 집중하고 있습니다.",
+        "애플리케이션 위에서만 보던 문제를 커널 아래에서 다시 보는 일에 재미를 붙였고, 새 시스템 기술은 읽는 것보다 직접 만들어 보면서 배우는 편입니다.",
+    ],
+    about_updated="2026-09-28",
+)
+
+def _cw(ch):
+    o = ord(ch)
+    if o >= 0x2E80: return 0.96          # CJK: roughly square glyphs
+    if ch == " ": return 0.28
+    if ch in "iljtfI.,:;'|!·": return 0.32
+    if ch.isupper() or ch in "mw": return 0.68
+    return 0.54
+
+def _w(s, size): return sum(_cw(c) for c in s) * size
+
+_SEG = _re.compile(r"\*\*(.+?)\*\*|`(.+?)`|([^*`]+)")
+def _segs(word):
+    out = []
+    for m in _SEG.finditer(word):
+        if m.group(1): out.append((m.group(1), "b"))
+        elif m.group(2): out.append((m.group(2), "c"))
+        else: out.append((m.group(3), ""))
+    return out
+
+def wrap(par, size, max_w):
+    """-> list of lines; each line = list of (text, style)."""
+    lines, cur, cur_w = [], [], 0.0
+    for word in par.split(" "):
+        segs = _segs(word)
+        ww = sum(_w(t, size) for t, _ in segs)
+        sp = _w(" ", size) if cur else 0
+        if cur and cur_w + sp + ww > max_w:
+            lines.append(cur); cur, cur_w, sp = [], 0.0, 0
+        if ww > max_w:                        # break an over-long word by characters
+            for t, st in segs:
+                for ch in t:
+                    cw = _w(ch, size)
+                    if cur and cur_w + cw > max_w:
+                        lines.append(cur); cur, cur_w = [], 0.0
+                    cur.append((ch, st)); cur_w += cw
+            continue
+        if sp: cur.append((" ", "")); cur_w += sp
+        cur.extend(segs); cur_w += ww
+    if cur: lines.append(cur)
+    return lines
+
+def rich_text(x, y, lines, size, lh, fill=None, accent=None, font=KO_SANS):
+    fill = fill or C["fg"]; accent = accent or C["purple"]
+    out = []
+    for i, line in enumerate(lines):
+        spans = []
+        for t, st in line:
+            t = t.replace("&", "&amp;").replace("<", "&lt;")
+            if st == "b": spans.append(f'<tspan font-weight="700">{t}</tspan>')
+            elif st == "c": spans.append(f'<tspan fill="{accent}" font-weight="700">{t}</tspan>')
+            else: spans.append(t)
+        out.append(f'<text x="{x}" y="{y + i*lh}" font-family="{font}" font-size="{size}" fill="{fill}" xml:space="preserve">{"".join(spans)}</text>')
+    return "\n".join(out)
+
+def heading(x, y, s, size=20):
+    return text(x, y, f":: {s}", size, C["fg"], KO_SANS, 800)
+
+def paragraphs(pars, x, y, size, lh, max_w, gap):
+    """Render paragraphs; returns (svg, y_after)."""
+    out = []
+    for p in pars:
+        ls = wrap(p, size, max_w)
+        out.append(rich_text(x, y, ls, size, lh))
+        y += len(ls) * lh + gap
+    return "\n".join(out), y - gap
+
+def card(W, H, body, rx=16):
+    return svg(W, H, f'<rect width="{W}" height="{H}" rx="{rx}" fill="{C["bg"]}" stroke="{C["line"]}"/>\n{body}')
+
+# ---- sidebar blocks (320 wide) ----
+def now_block():
+    W, pad, size, lh = 320, 22, 13, 20
+    body, y = paragraphs(TEXT["now"], pad, 96, size, lh, (W - 2*pad) * 0.94, 10)
+    H = y + 22
+    b = [heading(pad, 42, TEXT["now_title"]), text(pad, 68, TEXT["now_sub"], 11.5, C["mute"], MONO)]
+    return card(W, H, "\n".join(b) + "\n" + body)
+
+def section_header(W, s):
+    return svg(W, 46, heading(6, 34, s))
+
+def pinned_row(p):
+    W, H = 320, 64
+    col = C[p["color"]]
+    b = [f'<rect width="{W}" height="{H}" rx="12" fill="{C["bg"]}" stroke="{C["line"]}"/>',
+         f'<rect x="12" y="12" width="40" height="40" rx="10" fill="{C["panel"]}"/>', icon(p["icon"], 32, 32, 22, col),
+         text(66, 28, p["name"], 14, C["blue"], KO_SANS, 800),
+         text(W - 18, 29, "↗", 13, C["mute"], KO_SANS, 400, "end"),
+         text(66, 48, p["desc"], 11, C["dim"], KO_SANS)]
+    return svg(W, H, "\n".join(b))
+
+def interests_block():
+    W, pad = 320, 22
+    rows = TEXT["interests"]
+    H = 60 + len(rows) * 30 + 14
+    b = [heading(pad, 42, "interests")]
+    y = 80
+    for tag, sub in rows:
+        b.append(text(pad, y, tag, 14, C["fg"], KO_SANS, 800))
+        b.append(text(pad + 98, y, sub, 11.5, C["mute"], KO_SANS))
+        y += 30
+    return card(W, H, "\n".join(b))
+
+def tools_block():
+    W, pad = 320, 22
+    names = TEXT["tools"]
+    b = [heading(pad, 42, "tools")]
+    x = pad
+    for n in names:
+        col = dict(PIN_ICONS).get(n, "fg")
+        b.append(f'<rect x="{x}" y="60" width="32" height="32" rx="8" fill="{C["panel"]}" stroke="{C["line"]}"/>')
+        b.append(icon(n, x + 16, 76, 18, C[col]))
+        x += 34
+    return card(W, 112, "\n".join(b))
+
+# ---- main blocks (640 wide) ----
+def about_block():
+    W, pad, size, lh = 640, 24, 13.5, 21
+    art_w, art_x = 200, W - pad - 200
+    text_w = art_x - pad - 20
+    body, y = paragraphs(TEXT["about"], pad, 90, size, lh, text_w * 0.94, 12)
+    H = max(y, 60 + 200) + 52
+    b = [heading(pad, 42, "about me"),
+         f'<path d="M{W-38} 0h16v30l-8-6-8 6z" fill="{C["purple"]}"/>',            # bookmark
+         f'<g transform="translate({art_x} 60)">{_about_art_inner()}</g>',
+         f'<path d="M{pad} {H-30}H{W-pad}" stroke="{C["line"]}"/>',
+         f'<rect x="{pad}" y="{H-22}" width="58" height="16" rx="3" fill="{C["purple"]}"/>',
+         text(pad + 29, H - 10, "POSTED", 9, C["bg"], MONO, 800, "middle", 'letter-spacing="1.5"'),
+         text(pad + 68, H - 10, TEXT["about_updated"], 11, C["dim"], MONO)]
+    return card(W, H, "\n".join(b) + "\n" + body)
+
+def _about_art_inner():
+    # 200x200 version of the trace → detect → respond illustration
+    b = [f'<rect width="200" height="200" rx="14" fill="{C["panel"]}" stroke="{C["line"]}"/>']
+    layers = [("dashboard", "userspace · React", "cyan", 22), ("detector", "rules · ML model", "purple", 76), ("kernel", "eBPF probes", "green", 130)]
+    for name, sub, col, y in layers:
+        b.append(f'<rect x="16" y="{y}" width="168" height="44" rx="10" fill="{C["bg"]}" stroke="{C[col]}" stroke-opacity=".6"/>')
+        b.append(f'<circle cx="32" cy="{y+22}" r="4" fill="{C[col]}"/>')
+        b.append(text(46, y + 19, name, 13, C["fg"], MONO, 700))
+        b.append(text(46, y + 35, sub, 11, C["mute"], MONO))
+    for y0, y1 in ((130, 120), (76, 66)):
+        b.append(f'<path d="M170 {y0}V{y1}" stroke="{C["line"]}" stroke-width="2"/>')
+        b.append(f'<circle cx="170" cy="{y0}" r="3" fill="{C["purple"]}"><animate attributeName="cy" values="{y0};{y1}" dur="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0" dur="1.2s" repeatCount="indefinite"/></circle>')
+    b.append(text(100, 190, "trace → detect → respond", 11, C["mute"], MONO, 400, "middle"))
+    return "\n".join(b)
+
+def main_blocks():
+    OUT.mkdir(exist_ok=True)
+    (OUT / "now.svg").write_text(now_block())
+    (OUT / "h-pinned.svg").write_text(section_header(320, "pinned"))
+    for p in TEXT["pinned"]:
+        (OUT / f'pinned-{p["id"]}.svg').write_text(pinned_row(p))
+    (OUT / "interests.svg").write_text(interests_block())
+    (OUT / "tools.svg").write_text(tools_block())
+    (OUT / "about.svg").write_text(about_block())
+    (OUT / "h-stack.svg").write_text(section_header(640, "tech stack"))
+    (OUT / "h-activity.svg").write_text(section_header(640, "activity"))
+    print("wrote text blocks")
+
+if __name__ == "__main__":
+    main_blocks()

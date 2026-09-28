@@ -49,7 +49,7 @@ def text(x, y, s, size=13, fill=C["fg"], font=MONO, weight=400, anchor="start"):
             f'fill="{fill}" text-anchor="{anchor}">{s}</text>')
 
 def render(u, year):
-    W, H = 520, 190
+    W, H = 640, 190
     cc = u["contributionsCollection"]
     repos = u["repositories"]
     stars = sum(n["stargazerCount"] for n in repos["nodes"])
@@ -64,7 +64,7 @@ def render(u, year):
         top.append(("Other", other))
 
     b = [f'<rect width="{W}" height="{H}" rx="14" fill="{C["bg"]}" stroke="{C["line"]}"/>',
-         f'<path d="M250 24V166" stroke="{C["line"]}"/>']
+         f'<path d="M310 24V166" stroke="{C["line"]}"/>']
     b.append(text(24, 36, f"activity · {year}", 12, C["purple"], MONO, 700))
     days = [d for w in cc["contributionCalendar"]["weeks"] for d in w["contributionDays"]]
     active = sum(1 for d in days if d["contributionCount"] > 0)
@@ -77,11 +77,11 @@ def render(u, year):
     for label, val, col in stats:
         b.append(f'<circle cx="28" cy="{y-4}" r="3" fill="{C[col]}"/>')
         b.append(text(40, y, label, 12, C["dim"], SANS))
-        b.append(text(226, y, str(val), 13, C["fg"], MONO, 700, "end"))
+        b.append(text(286, y, str(val), 13, C["fg"], MONO, 700, "end"))
         y += 26
     # languages
-    b.append(text(274, 36, "languages", 12, C["purple"], MONO, 700))
-    x, bx, bw = 274, 274, 222
+    b.append(text(334, 36, "languages", 12, C["purple"], MONO, 700))
+    x, bx, bw = 334, 334, 282
     b.append(f'<rect x="{bx}" y="48" width="{bw}" height="10" rx="5" fill="{C["hi"]}"/>')
     b.append(f'<clipPath id="bar"><rect x="{bx}" y="48" width="{bw}" height="10" rx="5"/></clipPath>')
     for i, (name, size) in enumerate(top):
@@ -92,11 +92,11 @@ def render(u, year):
     y = 84
     for i, (name, size) in enumerate(top):
         col = C[LANG_COLORS[i % len(LANG_COLORS)]] if name != "Other" else C["mute"]
-        cx = 274 if i % 2 == 0 else 392
+        cx = 334 if i % 2 == 0 else 476
         if i % 2 == 0 and i: y += 24
         b.append(f'<rect x="{cx}" y="{y-9}" width="9" height="9" rx="2" fill="{col}"/>')
         b.append(text(cx + 16, y, f"{name} {100*size/total:.0f}%", 11.5, C["dim"]))
-    b.append(text(496, 172, f"updated {datetime.date.today():%Y-%m-%d}", 10, C["mute"], MONO, 400, "end"))
+    b.append(text(616, 172, f"updated {datetime.date.today():%Y-%m-%d}", 10, C["mute"], MONO, 400, "end"))
     return (f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}" role="img">\n'
             + "\n".join(b) + "\n</svg>\n")
 

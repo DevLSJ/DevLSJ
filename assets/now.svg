@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="248" viewBox="0 0 320 248" role="img">
+<defs></defs>
+<rect width="320" height="248" rx="16" fill="#1a1b26" stroke="#3b4261"/>
+<text x="22" y="42" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="20" font-weight="800" fill="#c0caf5" text-anchor="start" >:: now</text>
+<text x="22" y="68" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="11.5" font-weight="400" fill="#565f89" text-anchor="start" >2026 · 캡스톤 프로젝트</text>
+<text x="22" y="96" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#c0caf5" xml:space="preserve"><tspan font-weight="700">eBPF-Trace</tspan> — 리눅스 커널 레벨에서 공급망</text>
+<text x="22" y="116" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#c0caf5" xml:space="preserve">공격을 탐지하는 시스템을 만들고 있습니다.</text>
+<text x="22" y="146" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#c0caf5" xml:space="preserve">eBPF 프로브로 커널 이벤트를 수집하고, 탐지</text>
+<text x="22" y="166" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#c0caf5" xml:space="preserve">규칙과 ML 모델로 판별한 뒤, 대응 에이전트와</text>
+<text x="22" y="186" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#c0caf5" xml:space="preserve">React 대시보드까지 이어지는 흐름을 직접</text>
+<text x="22" y="206" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="13" fill="#c0caf5" xml:space="preserve">구현 중입니다.</text>
+</svg>

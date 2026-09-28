@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="224" viewBox="0 0 320 224" role="img">
+<defs></defs>
+<rect width="320" height="224" rx="16" fill="#1a1b26" stroke="#3b4261"/>
+<text x="22" y="42" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="20" font-weight="800" fill="#c0caf5" text-anchor="start" >:: interests</text>
+<text x="22" y="80" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#c0caf5" text-anchor="start" >#eBPF</text>
+<text x="120" y="80" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#565f89" text-anchor="start" >kernel tracing</text>
+<text x="22" y="110" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#c0caf5" text-anchor="start" >#Linux</text>
+<text x="120" y="110" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#565f89" text-anchor="start" >systems programming</text>
+<text x="22" y="140" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#c0caf5" text-anchor="start" >#Security</text>
+<text x="120" y="140" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#565f89" text-anchor="start" >supply-chain attack detection</text>
+<text x="22" y="170" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#c0caf5" text-anchor="start" >#Android</text>
+<text x="120" y="170" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#565f89" text-anchor="start" >Kotlin mobile apps</text>
+<text x="22" y="200" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="14" font-weight="800" fill="#c0caf5" text-anchor="start" >#Backend</text>
+<text x="120" y="200" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="11.5" font-weight="400" fill="#565f89" text-anchor="start" >Java · Python · PostgreSQL</text>
+</svg>

@@ -1,15 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="355" viewBox="0 0 640 355" role="img">
 <defs></defs>
-<rect width="200" height="200" rx="14" fill="#1a1b26" stroke="#3b4261"/>
-<rect x="16" y="22" width="168" height="44" rx="10" fill="#24283b" stroke="#7dcfff" stroke-opacity=".6"/>
+<rect width="640" height="355" rx="16" fill="#1a1b26" stroke="#3b4261"/>
+<text x="24" y="42" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="20" font-weight="800" fill="#c0caf5" text-anchor="start" >:: about me</text>
+<path d="M602 0h16v30l-8-6-8 6z" fill="#bb9af7"/>
+<g transform="translate(416 60)"><rect width="200" height="200" rx="14" fill="#24283b" stroke="#3b4261"/>
+<rect x="16" y="22" width="168" height="44" rx="10" fill="#1a1b26" stroke="#7dcfff" stroke-opacity=".6"/>
 <circle cx="32" cy="44" r="4" fill="#7dcfff"/>
 <text x="46" y="41" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="13" font-weight="700" fill="#c0caf5" text-anchor="start" >dashboard</text>
 <text x="46" y="57" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="11" font-weight="400" fill="#565f89" text-anchor="start" >userspace · React</text>
-<rect x="16" y="76" width="168" height="44" rx="10" fill="#24283b" stroke="#bb9af7" stroke-opacity=".6"/>
+<rect x="16" y="76" width="168" height="44" rx="10" fill="#1a1b26" stroke="#bb9af7" stroke-opacity=".6"/>
 <circle cx="32" cy="98" r="4" fill="#bb9af7"/>
 <text x="46" y="95" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="13" font-weight="700" fill="#c0caf5" text-anchor="start" >detector</text>
 <text x="46" y="111" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="11" font-weight="400" fill="#565f89" text-anchor="start" >rules · ML model</text>
-<rect x="16" y="130" width="168" height="44" rx="10" fill="#24283b" stroke="#9ece6a" stroke-opacity=".6"/>
+<rect x="16" y="130" width="168" height="44" rx="10" fill="#1a1b26" stroke="#9ece6a" stroke-opacity=".6"/>
 <circle cx="32" cy="152" r="4" fill="#9ece6a"/>
 <text x="46" y="149" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="13" font-weight="700" fill="#c0caf5" text-anchor="start" >kernel</text>
 <text x="46" y="165" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="11" font-weight="400" fill="#565f89" text-anchor="start" >eBPF probes</text>
@@ -17,5 +20,18 @@
 <circle cx="170" cy="130" r="3" fill="#bb9af7"><animate attributeName="cy" values="130;120" dur="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0" dur="1.2s" repeatCount="indefinite"/></circle>
 <path d="M170 76V66" stroke="#3b4261" stroke-width="2"/>
 <circle cx="170" cy="76" r="3" fill="#bb9af7"><animate attributeName="cy" values="76;66" dur="1.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="1;0" dur="1.2s" repeatCount="indefinite"/></circle>
-<text x="100" y="190" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="11" font-weight="400" fill="#565f89" text-anchor="middle" >trace → detect → respond</text>
+<text x="100" y="190" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="11" font-weight="400" fill="#565f89" text-anchor="middle" >trace → detect → respond</text></g>
+<path d="M24 325H616" stroke="#3b4261"/>
+<rect x="24" y="333" width="58" height="16" rx="3" fill="#bb9af7"/>
+<text x="53" y="345" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="9" font-weight="800" fill="#1a1b26" text-anchor="middle" letter-spacing="1.5">POSTED</text>
+<text x="92" y="345" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="11" font-weight="400" fill="#a9b1d6" text-anchor="start" >2026-09-28</text>
+<text x="24" y="90" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="13.5" fill="#c0caf5" xml:space="preserve">안녕하세요, 컴퓨터소프트웨어공학을 전공하는 주니어</text>
+<text x="24" y="111" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="13.5" fill="#c0caf5" xml:space="preserve">개발자 <tspan font-weight="700">DevLSJ</tspan>입니다.</text>
+<text x="24" y="144" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="13.5" fill="#c0caf5" xml:space="preserve">Kotlin으로 모바일 앱을, Java와 TypeScript로 관리자</text>
+<text x="24" y="165" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="13.5" fill="#c0caf5" xml:space="preserve">웹을, Python으로 탐지 서비스를 만들어 봤습니다. 지금은</text>
+<text x="24" y="186" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="13.5" fill="#c0caf5" xml:space="preserve"><tspan font-weight="700">eBPF</tspan>로 리눅스 커널 레벨에서 공급망 공격을 잡아내는</text>
+<text x="24" y="207" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="13.5" fill="#c0caf5" xml:space="preserve">캡스톤 프로젝트에 집중하고 있습니다.</text>
+<text x="24" y="240" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="13.5" fill="#c0caf5" xml:space="preserve">애플리케이션 위에서만 보던 문제를 커널 아래에서 다시</text>
+<text x="24" y="261" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="13.5" fill="#c0caf5" xml:space="preserve">보는 일에 재미를 붙였고, 새 시스템 기술은 읽는 것보다 직접</text>
+<text x="24" y="282" font-family="-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Segoe UI','Malgun Gothic','Noto Sans KR',Roboto,Helvetica,Arial,sans-serif" font-size="13.5" fill="#c0caf5" xml:space="preserve">만들어 보면서 배우는 편입니다.</text>
 </svg>
