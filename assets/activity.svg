@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="520" height="190" viewBox="0 0 520 190" role="img">
+<rect width="520" height="190" rx="14" fill="#1a1b26" stroke="#3b4261"/>
+<path d="M250 24V166" stroke="#3b4261"/>
+<text x="24" y="36" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="12" font-weight="700" fill="#bb9af7" text-anchor="start">activity · 2026</text>
+<circle cx="28" cy="62" r="3" fill="#bb9af7"/>
+<text x="40" y="66" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#a9b1d6" text-anchor="start">contributions</text>
+<text x="226" y="66" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="13" font-weight="700" fill="#c0caf5" text-anchor="end">174</text>
+<circle cx="28" cy="88" r="3" fill="#7dcfff"/>
+<text x="40" y="92" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#a9b1d6" text-anchor="start">commits</text>
+<text x="226" y="92" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="13" font-weight="700" fill="#c0caf5" text-anchor="end">163</text>
+<circle cx="28" cy="114" r="3" fill="#9ece6a"/>
+<text x="40" y="118" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#a9b1d6" text-anchor="start">pull requests</text>
+<text x="226" y="118" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="13" font-weight="700" fill="#c0caf5" text-anchor="end">7</text>
+<circle cx="28" cy="140" r="3" fill="#e0af68"/>
+<text x="40" y="144" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#a9b1d6" text-anchor="start">public repos</text>
+<text x="226" y="144" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="13" font-weight="700" fill="#c0caf5" text-anchor="end">7</text>
+<circle cx="28" cy="166" r="3" fill="#ff9e64"/>
+<text x="40" y="170" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="12" font-weight="400" fill="#a9b1d6" text-anchor="start">active days</text>
+<text x="226" y="170" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="13" font-weight="700" fill="#c0caf5" text-anchor="end">28</text>
+<text x="274" y="36" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="12" font-weight="700" fill="#bb9af7" text-anchor="start">languages</text>
+<rect x="274" y="48" width="222" height="10" rx="5" fill="#292e42"/>
+<clipPath id="bar"><rect x="274" y="48" width="222" height="10" rx="5"/></clipPath>
+<rect x="274.0" y="48" width="70.7" height="10" fill="#bb9af7" clip-path="url(#bar)"/>
+<rect x="344.7" y="48" width="66.5" height="10" fill="#7aa2f7" clip-path="url(#bar)"/>
+<rect x="411.2" y="48" width="62.9" height="10" fill="#7dcfff" clip-path="url(#bar)"/>
+<rect x="474.1" y="48" width="12.7" height="10" fill="#9ece6a" clip-path="url(#bar)"/>
+<rect x="486.8" y="48" width="3.2" height="10" fill="#ff9e64" clip-path="url(#bar)"/>
+<rect x="490.1" y="48" width="5.9" height="10" fill="#565f89" clip-path="url(#bar)"/>
+<rect x="274" y="75" width="9" height="9" rx="2" fill="#bb9af7"/>
+<text x="290" y="84" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="11.5" font-weight="400" fill="#a9b1d6" text-anchor="start">TypeScript 32%</text>
+<rect x="392" y="75" width="9" height="9" rx="2" fill="#7aa2f7"/>
+<text x="408" y="84" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="11.5" font-weight="400" fill="#a9b1d6" text-anchor="start">Java 30%</text>
+<rect x="274" y="99" width="9" height="9" rx="2" fill="#7dcfff"/>
+<text x="290" y="108" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="11.5" font-weight="400" fill="#a9b1d6" text-anchor="start">Python 28%</text>
+<rect x="392" y="99" width="9" height="9" rx="2" fill="#9ece6a"/>
+<text x="408" y="108" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="11.5" font-weight="400" fill="#a9b1d6" text-anchor="start">Kotlin 6%</text>
+<rect x="274" y="123" width="9" height="9" rx="2" fill="#ff9e64"/>
+<text x="290" y="132" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="11.5" font-weight="400" fill="#a9b1d6" text-anchor="start">JavaScript 1%</text>
+<rect x="392" y="123" width="9" height="9" rx="2" fill="#565f89"/>
+<text x="408" y="132" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="11.5" font-weight="400" fill="#a9b1d6" text-anchor="start">Other 3%</text>
+<text x="496" y="172" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="10" font-weight="400" fill="#565f89" text-anchor="end">updated 2026-09-28</text>
+</svg>

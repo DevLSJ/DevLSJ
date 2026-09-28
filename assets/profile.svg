@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="250" viewBox="0 0 320 250" role="img">
+<defs></defs>
+<rect width="320" height="250" rx="16" fill="#1a1b26" stroke="#3b4261"/>
+<circle cx="60" cy="66" r="40" fill="#24283b" stroke="#bb9af7" stroke-width="3"/>
+<text x="60" y="76" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="28" font-weight="700" fill="#bb9af7" text-anchor="middle" >&gt;_</text>
+<text x="116" y="60" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="26" font-weight="800" fill="#c0caf5" text-anchor="start" >DevLSJ</text>
+<text x="116" y="84" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="14" font-weight="400" fill="#565f89" text-anchor="start" >@DevLSJ</text>
+<path d="M24 122H296" stroke="#3b4261"/>
+<text x="26" y="150" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="13" font-weight="400" fill="#bb9af7" text-anchor="start" >▸</text>
+<text x="44" y="150" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="14" font-weight="400" fill="#a9b1d6" text-anchor="start" >Junior Developer</text>
+<text x="26" y="174" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="13" font-weight="400" fill="#bb9af7" text-anchor="start" >▸</text>
+<text x="44" y="174" font-family="-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif" font-size="14" font-weight="400" fill="#a9b1d6" text-anchor="start" >Computer Software Engineering</text>
+<g transform="translate(26 194)" fill="none" stroke="#565f89" stroke-width="1.6" stroke-linecap="round"><rect x="1" y="2.5" width="12" height="10.5" rx="2"/><path d="M1 6h12M4.5 1v3M9.5 1v3"/></g>
+<text x="48" y="206" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="13" font-weight="400" fill="#565f89" text-anchor="start" >Joined GitHub · Oct 2024</text>
+<g transform="translate(26 218)" fill="none" stroke="#565f89" stroke-width="1.6" stroke-linecap="round"><circle cx="7" cy="7" r="5.6"/><path d="M7 3.8V7l2.3 1.6"/></g>
+<text x="48" y="230" font-family="ui-monospace,'SF Mono',Menlo,Consolas,'Liberation Mono',monospace" font-size="13" font-weight="400" fill="#565f89" text-anchor="start" >UTC+09:00</text>
+</svg>
